@@ -17,7 +17,7 @@ const StarRating = () => {
   const starIds = [1, 2, 3, 4, 5];
   const [hovered, setHovered] = useState(0);
   const [click, setClick] = useState(0);
-  //const [clicked, setClicked] = useState(0)
+  const [clicked, setClicked] = useState(0)
 
   const getImg = (id) => {
     return hovered >= id || click >= id ? FULL_STAR : EMPTY_STAR
@@ -230,11 +230,11 @@ const StarRating = () => {
           alt='Img not found'
           onClick={() => {
             setClick(id);
-            //setClicked(id);
+            setClicked(id);
           }}
           onMouseOut={() => {
             setHovered(0);
-            //setClick(clicked);
+            setClick(clicked);
           }}
           width={60}
           height={60}
